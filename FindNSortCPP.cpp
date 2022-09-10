@@ -5,6 +5,7 @@
 
 const int INT_ARRAY_SIZE = 8;
 int findIndexOfInt(int x, int integers[]);
+int findIndexOfInt(int x, int integers[], int count[]);
 void intBubbleSort(int integers[], int size);
 
 
@@ -14,7 +15,7 @@ int main()
     // Добавить ввод элементов массива ints и задание направления сортировки пользователем\
     // через консоль
     int ints[] = {1, 20, 42, -80, 0, 10, 20, 5};
-    /* int x = 1000;
+    int x = 20;
     try
     {
         std::cout << findIndexOfInt(x, ints) << "\n";
@@ -22,12 +23,12 @@ int main()
     catch (const std::exception& ex)
     {
         std::cout << ex.what() << std::endl;
-    } */
-    intBubbleSort(ints, INT_ARRAY_SIZE);
+    }
+    /* intBubbleSort(ints, INT_ARRAY_SIZE);
     for (int i = 0; i < INT_ARRAY_SIZE; i++)
     {
         std::cout << ints[i] << " ";
-    }
+    } */
 }
 
 /* Возвращает индекс первого попавшегося в массиве числа, равного заданному */
@@ -43,6 +44,18 @@ int findIndexOfInt(int x, int integers[])
         i++;
     }
     throw std::exception("Item not found!");
+}
+
+/* 
+* Функция поиска в массиве integers элементов, равных заданному x
+* x - число, которое надо найти в массиве
+* integers - массив, в котором нужно искать число
+* count - массив, котороый нужно передать внутрь функции, а после завершения её работы в ячейке
+* под индексом 0 должен появиться результат - количество элементов x, найденных в массиве
+*/
+int findIndexOfInt(int x, int integers[], int count[])
+{
+    return 0;
 }
 
 // TODO
